@@ -46,7 +46,7 @@ function App() {
       href="#services"
       className="bg-green-800 text-lime-50 px-6 py-3 rounded-lg hover:bg-green-500 transition duration-300 inline-block"
     >
-      Sign 
+      Sign in
     </a>
               </li>
             </ul>
@@ -85,11 +85,35 @@ function App() {
       <section id="about" className="py-16 bg-white px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-3xl font-semibold mb-6">About Us</h3>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Our church is a vibrant community of believers who come together to worship, serve, and support one another. 
-            We are passionate about spreading love and hope.
+          <p className="text-lg text-gray-700 leading-relaxed text-justify">
+          Afya Ustawi Foundation was established in 2025, this is a non-governmental organization that empowers the community in gaining more access toward matters conserning their health and social welfare,
+           The organization  operates in Dodoma and Dar es salaam, Afya Ustawi 
+          Foundation is nurtured by the late Mwl Julius Nyerere’s philosophy describing three enemies of Tanzania being Poverty, Diseases and Ignorance.
           </p>
+          <p className="text-lg text-gray-700 leading-relaxed text-justify">
+          The foundation believes that to achieve a healthier community it is necessary to address all 
+          three enemies as one can be a causative and consequence of the other and the circle goes on. 
+           </p>
         </div>
+        <div className="mb-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-5 py-5 space-y-2 ">
+            <div className="bg-white shadow-lg rounded-lg p-5 items-center">
+              <h4 className="text-xl font-semibold text-center mb-4 text-green-800">OUR MISSION</h4>
+              <p className="text-gray-700 text-center">empowering people to gain more control over their health” 
+                we serve to empower communities with resources 
+                and skills that enable them to live heathier life styles through sustainable and community 
+                driven initiatives, bridging the gap between ignorance, diseases, and poverty.</p>
+            </div>
+            <div className="bg-white shadow-lg rounded-lg p-6">
+              <h4 className="text-xl font-semibold mb-4 text-center text-green-800">OUR VISION</h4>
+              <p className="text-gray-700 text-center">being the leading force in creating a future where people are empowered to live healthier, 
+                more fulfilling lives.</p>
+            </div>
+            <div className="bg-white shadow-lg rounded-lg p-6">
+              <h4 className="text-xl font-semibold mb-4 text-center text-green-800">OUR VALUES</h4>
+              <p className="text-gray-700 text-center">.Quality of care, financial responsibility, Empathy</p>
+              <span><p className="text-gray-700 text-center">.learning, Intergrity, inclusion, Resilience, Health sustainability.</p></span>
+            </div>
+            </div>
       </section>
 
       {/* Services Section */}
