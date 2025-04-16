@@ -46,7 +46,7 @@ function App() {
       href="#services"
       className="bg-green-800 text-lime-50 px-6 py-3 rounded-lg hover:bg-green-500 transition duration-300 inline-block"
     >
-      Sign 
+      Sign in
     </a>
               </li>
             </ul>
