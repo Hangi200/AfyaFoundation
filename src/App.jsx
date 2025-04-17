@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom"; // Import Link for routing
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faChildren, faChurch, faGamepad, faNotesMedical, faPeopleRoof, faPersonDigging, faShieldHeart, faStaffSnake, faWarehouse } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faChildren, faChurch, faGamepad, faNotesMedical, faPaperPlane, faPeopleRoof, faPersonDigging, faShieldHeart, faStaffSnake, faWarehouse } from '@fortawesome/free-solid-svg-icons'
 import morning from "./assets/mainlogo.png";
 import health from "./assets/health1.jpg";
 import health1 from "./assets/healthcare.png"
@@ -53,7 +53,7 @@ function App() {
               </li>
               <li>
               <a
-      href="#services"
+      href="#contact"
       className="bg-green-800 text-lime-50 px-6 py-3 rounded-lg hover:bg-green-500 transition duration-300 inline-block"
     >
       Donate Now
@@ -148,15 +148,12 @@ cognizant of the suffering of households in Dodoma and Dar es salaam Tanzania, w
 line; yet, compounded by numerous needs to reach full potential and live fulfilling lives.
  
            </p>
-        </div>
-       
-        </div>
-            
-           
+        </div>     
+        </div>      
       </section>
 
       {/* Services Section */}
-      <section id="services" className="bg-gray-50 py-16 px-4">
+      <section id="services" className="bg-green-50 py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h3 className="text-2xl font-bold mb-6">Our Projects</h3>
           <Swiper
@@ -273,18 +270,138 @@ line; yet, compounded by numerous needs to reach full potential and live fulfill
         </div>
       </section>
 
+
+      {/* Testimonial Section */}
+      <section id="contact" className="py-16 bg-white text-gray px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="grid gap-1 pt-2">
+          <h3 className="text-2xl font-bold mb-6">Testimonials</h3>
+          <p className="pb-5">Here from our Community</p>
+          </div>
+          <div className="pt-5 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-10">
+          <div className="bg-white shadow-lg rounded-lg p-5 px-10">
+      <div className="flex flex-col items-center text-center">
+        <div className="w-20 h-20 flex justify-center items-center bg-green-50 shadow-xl rounded-full mb-3">
+        <img src="https://i.pravatar.cc/150?img=49" alt=""  className="rounded-full"/>
+        </div>
+        <h4 className="text-xl font-semibold mb-3 text-green-950">Dr.Miriam Peter</h4>
+        <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+    </div>
+
+    <div className="bg-white shadow-lg rounded-lg p-5 px-10">
+      <div className="flex flex-col items-center text-center">
+        <div className="w-20 h-20 flex justify-center items-center bg-green-50 shadow-xl rounded-full mb-3">
+        <img src="https://i.pravatar.cc/150?img=18" alt=""  className="rounded-full"/>
+        </div>
+        <h4 className="text-xl font-semibold mb-3 text-green-950">Dr.Damas John</h4>
+        <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+    </div>
+
+    <div className="bg-white shadow-lg rounded-lg p-5 px-10">
+      <div className="flex flex-col items-center text-center">
+        <div className="w-20 h-20 flex justify-center items-center bg-green-50 shadow-xl rounded-full mb-3">
+          <img src="https://i.pravatar.cc/150?img=35" alt=""  className="rounded-full"/>
+        </div>
+        <h4 className="text-xl font-semibold mb-3 text-green-950">Anna Pius</h4>
+        <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+    </div>
+    </div>
+    </div>
+      </section>
+
+
+      {/* newslatter Section */}
+      <section id="contact" className="py-12 bg-green-50 text-gray-800 px-4">
+  <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+    
+    <div className="space-y-2 md:w-1/2">
+      <h3 className="text-2xl font-bold text-green-900">Newsletter</h3>
+      <p className="text-base text-gray-700">
+        Get the latest updates from Afya Ustawi Foundations.
+      </p>
+    </div>
+
+    <div className="flex items-center gap-2 md:w-1/2 w-full">
+      <input
+        type="email"
+        placeholder="Enter your email"
+        className="w-full px-4 py-2 border border-green-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-100"
+      />
+      <button
+        type="submit"
+        className="bg-green-900 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300"
+      >
+        <FontAwesomeIcon icon={faPaperPlane} className="text-lg" />
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
       {/* Contact Section */}
       <section id="contact" className="py-16 bg-green-900 text-white px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-3xl font-semibold mb-6">Contact Us</h3>
-          <p className="text-lg mb-4">
-            We would love to hear from you! Get in touch with us for more information or prayer requests.
-          </p>
-          <a href="mailto:info@churchname.com" className="bg-yellow-500 text-green-600 px-6 py-3 rounded-lg hover:bg-yellow-600 transition duration-300 inline-block">
-            Send an Email
-          </a>
-        </div>
-      </section>
+  <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12">
+    
+    {/* Left Side: Info */}
+    <div className="p-5 space-y-5">
+      <h3 className="text-3xl font-bold">Get In Touch</h3>
+      <p className="text-lg text-gray-100 leading-relaxed text-justify">
+        Whether you have questions, feedback, or want to collaborate, we’d love to hear from you.
+        Afya Ustawi Foundation is committed to building healthier communities.
+      </p>
+      <ul className="space-y-3 text-base text-gray-100">
+        <li> <FontAwesomeIcon icon={faPaperPlane} className="text-lg" /> Location: Nairobi, Kenya</li>
+        <li> <FontAwesomeIcon icon={faPaperPlane} className="text-lg" /> <a href="tel:+254712345678" className="underline">+254 712 345 678</a></li>
+        <li> <FontAwesomeIcon icon={faPaperPlane} className="text-lg" /> Email: <a href="mailto:info@afyaustawifoundation.org" className="underline">info@afyaustawifoundation.org</a></li>
+        <li> <FontAwesomeIcon icon={faPaperPlane} className="text-lg" /> Website: <a href="https://afyaustawifoundation.org" target="_blank" className="underline">afyaustawifoundation.org</a></li>
+        <li> <FontAwesomeIcon icon={faPaperPlane} className="text-lg" />Instagram: <a href="https://instagram.com/afyaustawi" target="_blank" className="underline">@afyaustawi</a></li>
+      </ul>
+    </div>
+
+    {/* Right Side: Form */}
+    <form className="bg-green-50 rounded-lg p-6 shadow-md space-y-4 text-gray-800">
+    <h3 className="text-3xl font-bold">Send a message</h3>
+      <div>
+        <label className="block font-medium mb-1">Full Name</label>
+        <input
+          type="text"
+          placeholder="Your name"
+          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+      </div>
+      <div>
+        <label className="block font-medium mb-1">Email</label>
+        <input
+          type="email"
+          placeholder="you@example.com"
+          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+      </div>
+      <div>
+        <label className="block font-medium mb-1">Message</label>
+        <textarea
+          rows="5"
+          placeholder="Your message..."
+          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        className="bg-green-900 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition duration-300"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
 
       {/* Footer */}
       <div className="bg-gray-100">
