@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom"; // Import Link for routing
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faChildren, faChurch, faGamepad, faNotesMedical, faPaperPlane, faPeopleRoof, faPersonDigging, faShieldHeart, faStaffSnake, faWarehouse } from '@fortawesome/free-solid-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faBars, faChildren, faEnvelope, faGamepad, faGlobe, faGrinStars, faNotesMedical, faPaperPlane, faPeopleRoof, faPersonDigging, faPhone, faShieldHeart, faWarehouse } from '@fortawesome/free-solid-svg-icons'
 import morning from "./assets/mainlogo.png";
 import health from "./assets/health1.jpg";
 import health1 from "./assets/healthcare.png"
@@ -11,6 +12,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import { Autoplay } from 'swiper/modules';
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
 
 
 
@@ -18,51 +20,72 @@ import { Autoplay } from 'swiper/modules';
 function App() {
 
   const [navOpen, setNavOpen] = useState(false); // State for mobile menu
+  
 
   return (
     <div className="font-sans bg-gray-100">
       {/* Header Section */}
-      <header className="bg-green-700 text-white py-4 ">
-        <div className="max-w-6xl mx-auto flex justify-between items-center px-4">
-          <div className="flex items-center space-x-3 space-y-4">
-        
-        <img src={morning} alt="Event 1" className="w-20 h-15 object-cover  rounded-lg " />
-          <span><h1 className="text-1xl sm:text-2.5xl font-semibold">Afya Ustawi Foundation</h1></span>
-          </div>
-          {/* Mobile Menu Toggle */}
-          {
-          <button className="md:hidden text-white text-3xl " onClick={() => setNavOpen(!navOpen)}>
-               <FontAwesomeIcon icon={faBars}  className=" size-5 text-white-700 " />
-          </button>
-          }
-
-          {/* Navigation Links */}
-          <nav className={`absolute md:relative top-20 left-0 w-full md:w-auto md:flex ${navOpen ? "block" : "hidden "} bg-gray-700 md:bg-transparent lg:top-2`}>
-            <ul className="flex flex-col md:flex-row md:space-x-6 text-center md:text-left">
-              <li>
-                <a href="#home" className="block py-2 px-2 font-medium hover:text-gray-300">Home</a>
-              </li>
-              <li>
-                <a href="#about" className="block py-2 px-2 font-medium hover:text-gray-300">About</a>
-              </li>
-              <li>
-                <a href="#services" className="block py-2 px-2 font-medium hover:text-gray-300">Projects</a>
-              </li>
-              <li>
-                <a href="#contact" className="block py-2 px-2 font-medium hover:text-gray-300">Contact</a>
-              </li>
-              <li>
-              <a
-      href="#contact"
-      className="bg-green-800 text-lime-50 px-6 py-3 rounded-lg hover:bg-green-500 transition duration-300 inline-block"
-    >
-      Donate Now
-    </a>
-              </li>
-            </ul>
-          </nav>
+    <header className="bg-green-700 text-white py-4 sticky top-0 z-50">
+      <div className="max-w-6xl mx-auto flex justify-between items-center px-4">
+        {/* Logo and title */}
+        <div className="flex items-center space-x-3">
+          <img
+            src={morning}
+            alt="Event 1"
+            className="w-20 h-20 object-cover rounded-lg"
+          />
+          <h1 className="text-xl sm:text-lg font-semibold">Afya Ustawi Foundation</h1>
         </div>
-      </header>
+
+        {/* Mobile Menu Toggle */}
+        <button
+          className="md:hidden text-white text-3xl"
+          onClick={() => setNavOpen(!navOpen)}
+        >
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+
+        {/* Navigation Links */}
+        <nav
+          className={`absolute md:relative top-[5px] left-0 w-full md:w-auto ${
+            navOpen ? 'block' : 'hidden'
+          } md:flex bg-gray-700 md:bg-transparent`}
+        >
+          <ul className="flex flex-col md:flex-row md:space-x-6 text-center md:text-left px-15 md:p-0">
+            <li>
+              <a href="#home" className="block py-2 px-2 font-medium hover:text-gray-300">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#about" className="block py-2 px-2 font-medium hover:text-gray-300">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#services" className="block py-2 px-2 font-medium hover:text-gray-300">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="block py-2 px-2 font-medium hover:text-gray-300">
+                Contact
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                className="bg-green-800 text-lime-50 px-6 py-2 rounded-lg hover:bg-green-500 transition duration-300 inline-block mt-2 md:mt-0"
+              >
+                Donate Now
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+ 
+
 
       {/* Hero Section */}
       <section
@@ -272,7 +295,7 @@ line; yet, compounded by numerous needs to reach full potential and live fulfill
 
 
       {/* Testimonial Section */}
-      <section id="contact" className="py-16 bg-white text-gray px-4">
+      <section id="#" className="py-16 bg-white text-gray px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="grid gap-1 pt-2">
           <h3 className="text-2xl font-bold mb-6">Testimonials</h3>
@@ -357,11 +380,11 @@ line; yet, compounded by numerous needs to reach full potential and live fulfill
         Afya Ustawi Foundation is committed to building healthier communities.
       </p>
       <ul className="space-y-3 text-base text-gray-100">
-        <li> <FontAwesomeIcon icon={faPaperPlane} className="text-lg" /> Location: Nairobi, Kenya</li>
-        <li> <FontAwesomeIcon icon={faPaperPlane} className="text-lg" /> <a href="tel:+254712345678" className="underline">+254 712 345 678</a></li>
-        <li> <FontAwesomeIcon icon={faPaperPlane} className="text-lg" /> Email: <a href="mailto:info@afyaustawifoundation.org" className="underline">info@afyaustawifoundation.org</a></li>
-        <li> <FontAwesomeIcon icon={faPaperPlane} className="text-lg" /> Website: <a href="https://afyaustawifoundation.org" target="_blank" className="underline">afyaustawifoundation.org</a></li>
-        <li> <FontAwesomeIcon icon={faPaperPlane} className="text-lg" />Instagram: <a href="https://instagram.com/afyaustawi" target="_blank" className="underline">@afyaustawi</a></li>
+        <li> <FontAwesomeIcon icon={faLocationDot} className="text-lg" /> <strong>Location:</strong> Dar es salaam, Dodoma</li>
+        <li> <FontAwesomeIcon icon={faPhone} className="text-lg" /> <strong> Phone Number:</strong>  <a href="tel:+255714403767  " className="">+255714129452, +255757433611,+255714403767   </a></li>
+        <li> <FontAwesomeIcon icon={faEnvelope} className="text-lg" /> <strong>Email:</strong> <a href="mailto:info@afyaustawifoundation.org " className="">info@afyaustawifoundation.org</a></li>
+        <li> <FontAwesomeIcon icon={faGlobe} className="text-lg" /> <strong>Website:</strong> <a href="https://afyaustawifoundation.org" target="_blank" className="">afyaustawifoundation.org</a></li>
+        <li> <FontAwesomeIcon icon={faInstagram} className="text-lg" /> <strong> Instagram:</strong> <a href="https://instagram.com/afyaustawifoundation" target="_blank" className="">@afyaustawi</a></li>
       </ul>
     </div>
 
