@@ -18,10 +18,41 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
 
 
 function App() {
-
+  const [expandedIndex, setExpandedIndex] = useState(null);
   const [navOpen, setNavOpen] = useState(false); // State for mobile menu
-  
+  const testimonials = [
+    {
+      name: "Hatotengamaa Lakini Leo Anageuka",
+      image: "https://i.pravatar.cc/150?img=49",
+      quote: "Nilipofahamishwa kuwa mwanangu ana utindio wa ubongo na kwamba huenda asitengamae, nilivunjika moyo. Sikuwahi kujua chochote kuhusu hali hii, na nilichukulia taarifa hizo kwa uchungu mwingi. Ilikuwa kama ndoto mbaya ambayo nilitamani kuamka kutoka kwake. Lakini badala ya kukata tamaa, nilianza kutafuta suluhisho. Nilianza mazoezi tiba, na kwa mshangao wangu, nilianza kuona mabadiliko madogo kwa mwanangu. Yule ambaye hakuwa akigeuka alianza kusonga, na sasa, kwa furaha yangu isiyoelezeka, anageuka kama watoto wengine! Pia, mikakamao iliyokuwa ikimsumbua imepungua sana.Matumaini yangu yameongezeka sana kutokana na maendeleo haya. Ninawashukuru sana Afya Ustawi kwa ushauri wao wa thamani na kwa maneno yao ya kutia moyo. Walinifanya niamini kwamba licha ya changamoto, kuna uwezekano wa mwanangu kupiga hatua. Safari yetu inaendelea, lakini sasa nina nguvu na matumaini tele kwa ajili yake.Chagua mtindo unaoendana na hisia unazotaka kuwasilisha zaidi. Unaweza pia kuongeza jinsi shirika lako linavyosaidia wazazi wengine katika hali kama hizi.",
+    },
+    {
+      name: "Dr. Damas John",
+      image: "https://i.pravatar.cc/150?img=18",
+      quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla, ligula id euismod eleifend, mauris orci aliquam dui, sit amet condimentum ligula urna sit amet lorem. Nunc malesuada consectetur arcu id efficitur. Nulla facilisi. Mauris ac felis vel nunc convallis tincidunt.",
+    },
+    {
+      name: "Anna Pius",
+      image: "https://i.pravatar.cc/150?img=35",
+      quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla malesuada velit et facilisis. Donec maximus mollis velit, ac venenatis risus tempus a. Nam condimentum augue et urna feugiat, et iaculis felis tempor. Aliquam erat volutpat. Vivamus tincidunt convallis ex ac gravida.",
+    }
+  ];
+  const [openModal, setOpenModal] = useState(false);
+  const [selectedTestimonial, setSelectedTestimonial] = useState(null);
 
+  const handleReadMore = (index) => {
+    setExpandedIndex(index === expandedIndex ? null : index); // Toggle visibility
+  };
+  
+  const handleReadMuch = (testimonial) => {
+    setSelectedTestimonial(testimonial);
+    setOpenModal(true);
+  };
+
+  const closeModal = () => {
+    setOpenModal(false);
+    setSelectedTestimonial(null);
+  };
   return (
     <div className="font-sans bg-gray-100">
       {/* Header Section */}
@@ -295,48 +326,55 @@ line; yet, compounded by numerous needs to reach full potential and live fulfill
 
 
       {/* Testimonial Section */}
-      <section id="#" className="py-16 bg-white text-gray px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="grid gap-1 pt-2">
-          <h3 className="text-2xl font-bold mb-6">Testimonials</h3>
-          <p className="pb-5">Here from our Community</p>
+      <section className="py-16 bg-white text-gray px-4">
+      <div className="max-w-4xl mx-auto text-center">
+        <h3 className="text-2xl font-bold mb-2">Testimonials</h3>
+        <p className="pb-5">Hear from our Community</p>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 pt-5">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-white shadow-lg rounded-lg p-5 px-10">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-20 h-20 flex justify-center items-center bg-green-50 shadow-xl rounded-full mb-3">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="rounded-full"
+                  />
+                </div>
+                <h4 className="text-xl font-semibold mb-3 text-green-950">{testimonial.name}</h4>
+                <p className="text-gray-700">
+                  {testimonial.quote.substring(0, 70)}...
+                </p>
+                <button
+                  onClick={() => handleReadMuch(testimonial)}
+                  className="mt-4 text-green-900 hover:text-green-800"
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Modal */}
+      {openModal && selectedTestimonial && (
+        <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-xl w-full max-w-md text-center shadow-lg">
+            <h4 className="text-xl font-bold mb-3">{selectedTestimonial.name}</h4>
+            <p className="text-gray-700 mb-5">{selectedTestimonial.quote}</p>
+            <div className="flex justify-center gap-3">
+              <button
+                onClick={closeModal}
+                className="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800"
+              >
+                Close
+              </button>
+            </div>
           </div>
-          <div className="pt-5 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-10">
-          <div className="bg-white shadow-lg rounded-lg p-5 px-10">
-      <div className="flex flex-col items-center text-center">
-        <div className="w-20 h-20 flex justify-center items-center bg-green-50 shadow-xl rounded-full mb-3">
-        <img src="https://i.pravatar.cc/150?img=49" alt=""  className="rounded-full"/>
         </div>
-        <h4 className="text-xl font-semibold mb-3 text-green-950">Dr.Miriam Peter</h4>
-        <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-      </div>
-    </div>
-
-    <div className="bg-white shadow-lg rounded-lg p-5 px-10">
-      <div className="flex flex-col items-center text-center">
-        <div className="w-20 h-20 flex justify-center items-center bg-green-50 shadow-xl rounded-full mb-3">
-        <img src="https://i.pravatar.cc/150?img=18" alt=""  className="rounded-full"/>
-        </div>
-        <h4 className="text-xl font-semibold mb-3 text-green-950">Dr.Damas John</h4>
-        <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-      </div>
-    </div>
-
-    <div className="bg-white shadow-lg rounded-lg p-5 px-10">
-      <div className="flex flex-col items-center text-center">
-        <div className="w-20 h-20 flex justify-center items-center bg-green-50 shadow-xl rounded-full mb-3">
-          <img src="https://i.pravatar.cc/150?img=35" alt=""  className="rounded-full"/>
-        </div>
-        <h4 className="text-xl font-semibold mb-3 text-green-950">Anna Pius</h4>
-        <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-      </div>
-    </div>
-    </div>
-    </div>
-      </section>
+      )}
+    </section>
 
 
       {/* newslatter Section */}
