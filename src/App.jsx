@@ -7,6 +7,7 @@ import morning from "./assets/mainlogo.png";
 import health from "./assets/health1.jpg";
 import health1 from "./assets/healthcare.png"
 import health2 from "./assets/health2.jpeg"
+import health3 from "./assets/teng.jpeg"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -360,13 +361,13 @@ line; yet, compounded by numerous needs to reach full potential and live fulfill
       {/* Modal */}
       {openModal && selectedTestimonial && (
         <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-xl w-full max-w-md text-center shadow-lg">
-            <h4 className="text-xl font-bold mb-3">{selectedTestimonial.name}</h4>
-            <p className="text-gray-700 mb-5">{selectedTestimonial.quote}</p>
+          <div className="bg-white p-4 rounded-xl w-full max-w-md text-center shadow-lg">
+            <h4 className="text-xl font-bold mb-3 text-green-950">{selectedTestimonial.name}</h4>
+            <p className="text-gray-700 text-justify mb-5">{selectedTestimonial.quote}</p>
             <div className="flex justify-center gap-3">
               <button
                 onClick={closeModal}
-                className="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800"
+                className="bg-green-900 text-white py-2 px-4 rounded-md hover:bg-green-800"
               >
                 Close
               </button>
