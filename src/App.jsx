@@ -333,18 +333,18 @@ line; yet, compounded by numerous needs to reach full potential and live fulfill
         <p className="pb-5">Hear from our Community</p>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 pt-5">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white shadow-lg rounded-lg p-5 px-10">
+            <div key={index} className="bg-white shadow-lg  p-5 px-10">
               <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 flex justify-center items-center bg-green-50 shadow-xl rounded-full mb-3">
+                <div className="w-20 h-20 flex justify-center items-center bg-green-50 shadow-xl  mb-3">
                   <img
-                    src={testimonial.image}
+                    src={health3}
                     alt={testimonial.name}
-                    className="rounded-full"
+                    className="h-30 w-30"
                   />
                 </div>
                 <h4 className="text-xl font-semibold mb-3 text-green-950">{testimonial.name}</h4>
                 <p className="text-gray-700">
-                  {testimonial.quote.substring(0, 70)}...
+                  {testimonial.quote.substring(0, 42)}...
                 </p>
                 <button
                   onClick={() => handleReadMuch(testimonial)}
