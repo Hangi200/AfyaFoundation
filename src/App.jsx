@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faBars, faChildren, faEnvelope, faGamepad, faGlobe, faGrinStars, faNotesMedical, faPaperPlane, faPeopleRoof, faPersonDigging, faPhone, faShieldHeart, faWarehouse } from '@fortawesome/free-solid-svg-icons'
 import morning from "./assets/mainlogo.png";
-import health from "./assets/health1.jpg";
-import health1 from "./assets/healthcare.png"
-import health2 from "./assets/health2.jpeg"
+import health from "./assets/people.jpeg";
+import health1 from "./assets/healthcare.jpeg"
+import health2 from "./assets/madam.jpeg"
 import health3 from "./assets/teng.jpeg"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -24,18 +24,18 @@ function App() {
   const testimonials = [
     {
       name: "Hatotengamaa Lakini Leo Anageuka",
-      image: "https://i.pravatar.cc/150?img=49",
-      quote: "Nilipofahamishwa kuwa mwanangu ana utindio wa ubongo na kwamba huenda asitengamae, nilivunjika moyo. Sikuwahi kujua chochote kuhusu hali hii, na nilichukulia taarifa hizo kwa uchungu mwingi. Ilikuwa kama ndoto mbaya ambayo nilitamani kuamka kutoka kwake. Lakini badala ya kukata tamaa, nilianza kutafuta suluhisho. Nilianza mazoezi tiba, na kwa mshangao wangu, nilianza kuona mabadiliko madogo kwa mwanangu. Yule ambaye hakuwa akigeuka alianza kusonga, na sasa, kwa furaha yangu isiyoelezeka, anageuka kama watoto wengine! Pia, mikakamao iliyokuwa ikimsumbua imepungua sana.Matumaini yangu yameongezeka sana kutokana na maendeleo haya. Ninawashukuru sana Afya Ustawi kwa ushauri wao wa thamani na kwa maneno yao ya kutia moyo. Walinifanya niamini kwamba licha ya changamoto, kuna uwezekano wa mwanangu kupiga hatua. Safari yetu inaendelea, lakini sasa nina nguvu na matumaini tele kwa ajili yake.Chagua mtindo unaoendana na hisia unazotaka kuwasilisha zaidi. Unaweza pia kuongeza jinsi shirika lako linavyosaidia wazazi wengine katika hali kama hizi.",
+      image: health3,
+      quote: "Baada ya kugundulika kuwa mtoto wake ana utindio wa ubongo, mzazi alipitia mshtuko na maumivu makubwa ya kihisia. Hata hivyo, badala ya kukata tamaa, alianza hatua za mazoezi tiba na kuona maendeleo madogo lakini ya kutia moyo. Mtoto alianza kusonga na mikakamao kupungua, jambo lililoleta matumaini mapya. Mzazi huyo anashukuru shirika la Afya Ustawi kwa msaada wao wa kitaalamu na maneno ya faraja ambayo yalimpa nguvu mpya ya kuendelea na safari ya matibabu. Anaamini sasa kwamba pamoja na changamoto, kuna matumaini ya mtoto wake kuendelea kukua na kustawi..",
     },
     {
-      name: "Dr. Damas John",
-      image: "https://i.pravatar.cc/150?img=18",
-      quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla, ligula id euismod eleifend, mauris orci aliquam dui, sit amet condimentum ligula urna sit amet lorem. Nunc malesuada consectetur arcu id efficitur. Nulla facilisi. Mauris ac felis vel nunc convallis tincidunt.",
+      name: "Zaidi ya Manjano",
+      image: health2,
+      quote: "Furaha ya kumkaribisha mtoto mchanga iligeuka haraka kuwa hofu baada ya kugundulika kuwa na homa ya manjano na hatimaye kupooza kwa ubongo (cerebral palsy). Hali hiyo ilileta wasiwasi mkubwa kwa mzazi huyo hadi alipokutana na shirika la Afya Ustawi. Kupitia ushauri, matibabu, na msaada waliotoa, aliona mabadiliko katika maendeleo ya mtoto wake na akapata matumaini mapya. Mzazi huyo aligundua pia kuwa familia nyingi katika jamii huficha watoto wenye ulemavu kwa kukosa maarifa na msaada. Kupitia uzoefu wake, aliamua kuelimisha wengine kwamba watoto wenye ulemavu si laana bali ni zawadi. Anatoa wito kwa watu kuchangia Afya Ustawi ili waendelee kusaidia familia zaidi, kuwapa tiba, elimu, na matumaini kwa maisha bora ya watoto wao..",
     },
     {
-      name: "Anna Pius",
+      name: "Dhidi ya Matatizo, Kuelekea Matumaini",
       image: "https://i.pravatar.cc/150?img=35",
-      quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla malesuada velit et facilisis. Donec maximus mollis velit, ac venenatis risus tempus a. Nam condimentum augue et urna feugiat, et iaculis felis tempor. Aliquam erat volutpat. Vivamus tincidunt convallis ex ac gravida.",
+      quote: "Amina alizaliwa nyumbani kutokana na umbali mrefu hadi hospitali, na aligunduliwa kuwa na arthrogryposis hali inayozuia uwezo wa viungo vyake kusogea kwa kawaida. Wazazi wake, wakiwa na rasilimali haba, walifikiria hatua ya kukata miguu yake kama suluhisho. Hata hivyo, msaada ulifika kupitia shirika la Afya Ustawi, waliogharamia matibabu na kutoa ushauri kwa mama wa Amina. Kupitia mfululizo wa uwekaji gipsi, hali ya Amina ilianza kuboreka hatua kwa hatua. Leo hii, Amina anaendelea vizuri, akiwa na matumaini mapya ya maisha ya kawaida. Hadithi yake inaonyesha jinsi msaada kwa mashirika kama Afya Ustawi unavyoweza kubadilisha maisha ya watoto wenye ulemavu..",
     }
   ];
   const [openModal, setOpenModal] = useState(false);
@@ -94,6 +94,7 @@ function App() {
                 About
               </a>
             </li>
+            
             <li>
               <a href="#services" className="block py-2 px-2 font-medium hover:text-gray-300">
                 Projects
@@ -185,7 +186,7 @@ function App() {
 
             {/* our history */}
             <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 pt-6 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            <img src={health2} alt="" />
+            <img src={health} alt="" />
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold mb-6">Our History</h3>
           <p className="text-lg text-gray-700 leading-relaxed text-justify">
@@ -337,9 +338,9 @@ line; yet, compounded by numerous needs to reach full potential and live fulfill
               <div className="flex flex-col items-center text-center">
                 <div className="w-20 h-20 flex justify-center items-center bg-green-50 shadow-xl  mb-3">
                   <img
-                    src={health3}
+                    src={testimonial.image}
                     alt={testimonial.name}
-                    className="h-30 w-30"
+                    className="h-20 w-20 rounded-2xl"
                   />
                 </div>
                 <h4 className="text-xl font-semibold mb-3 text-green-950">{testimonial.name}</h4>
